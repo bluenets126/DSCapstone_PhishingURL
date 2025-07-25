@@ -6,7 +6,7 @@ https://public.tableau.com/app/profile/andrew.castaldi/viz/Phishing_URL_Dashboar
 
 IMPORTANT: There are cells in the jupyter notebook that take a long time to run.  Over an hour long.  Particularly ones that call PhishingFeatureExtractor class that take a while to run.  After running these cells, I saved the data captured into CSV files.  There is no need to run these cells to run the rest of the code.
 
-BLUF: I had to incorporate 2 datasets into one for training in order for the model to not overfit and perform better.  I used RandomForest as the model type because the dataset isn't too big.  The model was trained on only 10k records.  
+BLUF: I had to incorporate 2 datasets into one for training in order for the model to not overfit and perform better.  I used RandomForest as the model type because the dataset isn't too big.  The model was trained on only 10k records.  The model performs better than 98% in all tests performed. 
 
 Upon initial EDA, I found that the data was looking to good to be true.  55 values that all appeared to gather its information based on the URL, with no missing data.  So I originally had the idea of creating a function to test a random URL on the model when completing.  After training a model, I tested the model on a new dataset url_dataset.csv that only had a URL and phishing label.  The model performed at 52%.  After finding this out, I had to incorporate the original dataset with the new dataset that I found.  With the new dataset taking so long to gather the info, I got 5000 rows from the new dataset, and 5000 rows from the original dataset for training.  Both datasets were split to be 1/2 phishing and 1/2 legitimate URLs, with random sampling.
 
