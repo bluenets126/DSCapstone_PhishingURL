@@ -4,9 +4,9 @@ Data Science Captone Project 2 - Detecting Phishing URL's
 Tableau Dashboard Link:
 https://public.tableau.com/app/profile/andrew.castaldi/viz/Phishing_URL_Dashboard/Overview#1
 
-Data was pre-calculated and saved in CSV files for training and testing purposes.  After initial exploration, a second dataset was needed and fields were manually calculated using the Phishing_Features_Class.py file.  This process was time consuming so to save time from running the notebook, I removed the data to capture the fields and saved the dataframes as csv files for use later.  I removed the cells that calculated the field, but left one in which only calculates the data for about 100 rows.  Takes a few minutes to run.
-
 BLUF: I had to incorporate 2 datasets into one for training in order for the model to not overfit and perform better.  I used RandomForest as the model type because the dataset isn't too big.  The model was trained on only 10k records.  The model performs better than 98% in all tests performed. 
+
+Data was pre-calculated and saved in CSV files for training and testing purposes.  After initial exploration, a second dataset was needed and fields were manually calculated using the Phishing_Features_Class.py file.  This process was time consuming so to save time from running the notebook, I removed the data to capture the fields and saved the dataframes as csv files for use later.  I removed the cells that calculated the field, but left one in which only calculates the data for about 100 rows.  Takes a few minutes to run.
 
 Upon initial EDA, I found that the data was looking to good to be true.  55 values that all appeared to gather its information based on the URL, with no missing data.  So I originally had the idea of creating a function to test a random URL on the model when completing.  After training a model, I tested the model on a new dataset url_dataset.csv that only had a URL and phishing label.  The model performed at 52%.  After finding this out, I had to incorporate the original dataset with the new dataset that I found.  With the new dataset taking so long to gather the info, I got 5000 rows from the new dataset, and 5000 rows from the original dataset for training.  Both datasets were split to be 1/2 phishing and 1/2 legitimate URLs, with random sampling.
 
