@@ -1,3 +1,0 @@
-Name,True Negative (TN),False Positive (FP),False Negative (FN),True Positive (TP)
-Heuristic,18252,80169,1768,130523
-RandomForest,97924,497,359,131932
