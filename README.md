@@ -18,8 +18,6 @@ The baseline Heuristic approach which just looks at the URL link and determines 
 
 It seems that XGBoost or RandomForest performed almost equally as well.  Originally XGBoost was better, but after I created the new training dataset on the combined 2 datasets, RandomForest performed better.  So the final model is a RandomForest model.  
 
-One thing of note for improvement.  The datasets have phishing = 0 and legitimate = 1.  This made my calculations of recall and precision reversed.  So I should have focused the metrics on label 0 which I am realizing now, or reversing the labels upfront.
-
 Also, I had the skeleton to implement PCA in place, but I never actually used it.  The model wasn't running slow, since the dataset was on the relative smaller side, so I decided not to use PCA in the end, but you'll see the skeleton of the PCA in the code. 
 
 I created a function for testing at the end.  The function can take in a list of URL's or a single URL and will return the results to the users.
