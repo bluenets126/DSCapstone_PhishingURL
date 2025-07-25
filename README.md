@@ -4,7 +4,7 @@ Data Science Captone Project 2 - Detecting Phishing URL's
 Tableau Dashboard Link:
 https://public.tableau.com/app/profile/andrew.castaldi/viz/Phishing_URL_Dashboard/Overview#1
 
-IMPORTANT: There are cells in the jupyter notebook that take a long time to run.  Over an hour long.  Particularly ones that call PhishingFeatureExtractor class that take a while to run.  After running these cells, I saved the data captured into CSV files.  There is no need to run these cells to run the rest of the code.
+Data was pre-calculated and saved in CSV files for training and testing purposes.  After initial exploration, a second dataset was needed and fields were manually calculated using the Phishing_Features_Class.py file.  This process was time consuming so to save time from running the notebook, I removed the data to capture the fields and saved the dataframes as csv files for use later.  I removed the cells that calculated the field, but left one in which only calculates the data for about 100 rows.  Takes a few minutes to run.
 
 BLUF: I had to incorporate 2 datasets into one for training in order for the model to not overfit and perform better.  I used RandomForest as the model type because the dataset isn't too big.  The model was trained on only 10k records.  The model performs better than 98% in all tests performed. 
 
