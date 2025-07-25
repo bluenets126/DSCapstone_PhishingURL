@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Docker
+*.log
+*.pid
+*.sock
+.env
+.env.*
+
+# VS Code
+.vscode/
+
+# Mac/Unix hidden files
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+
+# Model files
+*.pkl
+*.joblib
+models/
+
+# Misc
+*.swp
+*.bak
+*.tmp
